@@ -1,0 +1,135 @@
+.org-carousel {
+  padding: 36px 60px;
+  background: #f6f6f6;
+  position: relative;
+}
+
+.org-carousel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+.org-carousel-top h3 {
+  margin: 0;
+  font-size: 28px;
+}
+.view-all-btn {
+  background: #cda00a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* viewport */
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* track contains slides in row */
+.carousel-track {
+  display: flex;
+  will-change: transform;
+}
+
+/* each slide */
+.carousel-slide {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* organization card style */
+.org-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(17,24,39,0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.org-carousel-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.org-card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.org-card h4,
+.org-card-body h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.org-card-btn {
+  background: #cda00a;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+/* controls */
+.carousel-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* small fallback layout when items <= slidesToShow */
+.simple-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+.simple-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 20px rgba(17,24,39,0.06); }
+.simple-card img { width: 100%; height: 140px; object-fit: cover; display:block; }
+.simple-card-body { padding: 12px; }
+.simple-card-body h4 { margin: 0 0 8px 0; }
+.simple-card-body button { background:#cda00a; color:white; padding:8px 10px; border:none; border-radius:6px; cursor:pointer; }
+
+/* responsive */
+@media (max-width: 1200px) {
+  .org-carousel { padding: 30px 28px; }
+}
+@media (max-width: 900px) {
+  .org-carousel-top h3 { font-size: 24px; }
+  .org-carousel-img { height: 130px; }
+}
+@media (max-width: 560px) {
+  .org-carousel-img { height: 110px; }
+  .org-card-btn { padding: 7px 8px; font-size: 13px; }
+}

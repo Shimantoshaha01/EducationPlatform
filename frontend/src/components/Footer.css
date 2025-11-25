@@ -1,0 +1,298 @@
+.footer {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 50%, #1a2f4a 100%);
+  color: #ffffff;
+  padding: 60px 0 0 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+  margin-bottom: 50px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #fbbf24;
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-links a::before {
+  content: '›';
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #fbbf24;
+}
+
+.footer-links a:hover {
+  color: #fbbf24;
+  padding-left: 15px;
+  transform: translateX(5px);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 40px 20px 40px;
+}
+
+.footer-bottom-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  /* Removed filter to show original logo colors */
+}
+
+.footer-university-info h4 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-address,
+.footer-contact {
+  font-size: 14px;
+  color: #d1d5db;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-contact a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-right: 15px;
+}
+
+.footer-contact a:hover {
+  color: #fbbf24;
+}
+
+.location-icon,
+.email-icon,
+.phone-icon {
+  font-size: 16px;
+}
+
+/* Social Media Icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-icon:hover {
+  background: #fbbf24;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
+  border-color: #fbbf24;
+}
+
+/* Copyright */
+.footer-copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 40px 0 0 0;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+    gap: 30px 20px;
+  }
+
+  .footer-bottom {
+    padding: 25px 30px 15px 30px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-social {
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 25px;
+  }
+
+  .footer-heading {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    padding: 20px 20px 15px 20px;
+  }
+
+  .footer-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-university-info h4 {
+    font-size: 16px;
+  }
+
+  .footer-address,
+  .footer-contact {
+    font-size: 13px;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .footer-copyright p {
+    font-size: 12px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-column {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.footer-column:nth-child(1) { animation-delay: 0.1s; }
+.footer-column:nth-child(2) { animation-delay: 0.2s; }
+.footer-column:nth-child(3) { animation-delay: 0.3s; }
+.footer-column:nth-child(4) { animation-delay: 0.4s; }
+.footer-column:nth-child(5) { animation-delay: 0.5s; }
+.footer-column:nth-child(6) { animation-delay: 0.6s; }

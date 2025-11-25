@@ -1,0 +1,63 @@
+.navbar {
+  width: 100%;
+  background: rgb(239, 239, 239);
+  padding: 10px 0;    /* remove side padding here */
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+.navbar-container {
+  max-width: 1200px;   /* restrict width */
+  margin: 0 auto;      /* center the content */
+  padding: 0 20px;     /* spacing on sides */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.uni-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #0066ff;
+}
+
+.login-btn {
+  padding: 7px 15px;
+  background: #0066ff;
+  color: white !important;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background: #004bb5;
+}
